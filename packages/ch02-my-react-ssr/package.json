@@ -4,8 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack --config ./webpack/webpack.dev.config.js",
-    "babel-node": "babel  src -d dist/src"
+    "build:dev": "webpack --config ./webpack/webpack.dev.config.js",
+    "build:server": "babel src -d ./dist/src",
+    "dev": "node app.js",
+    "start": "npm-run-all build:dev build:server dev"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +20,7 @@
     "babel-loader": "^8.0.6",
     "koa-static": "^5.0.0",
     "koa2": "^2.0.0-alpha.7",
+    "npm-run-all": "^4.1.5",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "webpack": "^4.41.2",

@@ -1,6 +1,7 @@
 //web 服务启动入口文件 放在根目录方便以后的部署
 
-const reactSsr  = require('./dist/src/server/middlewares/react-ssr').default;
+// const {reactServerMiddleware} = require('./dist/src/server/middlewares/react-ssr-01');
+const reactServerMiddleware  = require('./dist/src/server/middlewares/react-ssr-02').default;
 const Koa = require('koa2');
 const koaStatic =require('koa-static');
 const path = require('path');
@@ -16,9 +17,9 @@ app.use(koaStatic(
 console.log( path.join(__dirname, './dist/static'));
 
 //ssr 中间件
-app.use(reactSsr);
+app.use(reactServerMiddleware);
 
 //启动服务
-app.listen(9001);
-
-console.log('server is start .9001');
+app.listen(9001, function(){
+  console.log('server start. 9001, http://localhost:9001');
+});

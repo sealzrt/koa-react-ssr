@@ -18,7 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //引入Index 组件
 var _default = function _default(ctx, next) {
   var html = (0, _server.renderToString)(_react.default.createElement(_index.default, null));
-  ctx.body = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>my react ssr</title>\n</head>\n<body>\n    <div id=\"root\">\n       ".concat(html, " <span>\u6D4B\u8BD5\u5185\u5BB9</span>\n    </div>\n</body>\n</html>\n</body>\n<script type=\"text/javascript\"  src=\"index.js\"></script>\n");
+  ctx.body = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>my react ssr</title>\n</head>\n<body>\n    <div id=\"root\">".concat(html, "</div>\n<script type=\"text/javascript\"  src=\"index.js\"></script>\n</body>\n</html>\n");
   return next();
 };
 

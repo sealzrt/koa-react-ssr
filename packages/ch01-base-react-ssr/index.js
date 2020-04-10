@@ -36,8 +36,7 @@ http.createServer((req, res) => {
     </div>
 </body>
 </html>`);
-
     }
-).listen(9001);
-
-console.log('server start. 9001');
+).listen(9001, function(){
+  console.log('server start. 9001, http://localhost:9001');
+});

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel index.js --out-file index-compiled.js --presets=@babel/preset-react"
+    "start": "rm index-compiled.js && babel index.js --out-file index-compiled.js --presets=@babel/preset-react && node index-compiled.js"
   },
   "author": "",
   "license": "ISC",
